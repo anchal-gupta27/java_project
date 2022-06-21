@@ -88,6 +88,28 @@ public class Student
     {
      return "First Student: [First Name: " + firstName + "] [Last Name: " + lastName + "] [Age: " + age + "] [ID: " + IDNumber + "] [Gender: " + gender + "] [Grades : " + firstGrade + ", " +secondGrade + " and " + thirdGrade + "] [Average: " + Average + "]";
     }
+ 
+  public static void main(String args[]) 
+    {
+     Student first = new Student("Fouad", "Mouawad", 20, 200904935, 0, 89, 92, 92);
+     System.out.println("\n" + first);
+     
+     Student second = new Student("Maha", "Diab", 10, 200904965, 1, 89, 92, 92);
+     System.out.println("\n" + second);
+     
+     Student third = new Student("Amer", "Mouawad", 10, 200904975, 0, 89, 92, 92);
+     System.out.println("\n" + third);
+     
+     double Overalaverage = ( first.getfirstGrade() + second.getfirstGrade() + third.getfirstGrade() + first.getsecondGrade() + second.getsecondGrade() + third.getsecondGrade() + first.getthirdGrade() + second.getthirdGrade() + third.getthirdGrade() ) / 9;
+     System.out.println("\nOverall Average: " + Overalaverage);
+     double AverageAge = ( first.getage() + second.getage() + third.getage() ) / 3;
+     System.out.println("Average age: " + AverageAge);
+     
+     int Gender = first.getgender() + second.getgender() + third.getgender();
+     System.out.println("\nThere are " + Gender + " female(s) in the classe.");
+     int male = 3-Gender;
+     System.out.println("there are " + male + " male(s) in the classe.");
+    }
     
 
 }
